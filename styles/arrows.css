@@ -1,0 +1,87 @@
+.down::before{
+   content: "";
+   position: absolute;
+   background-color: rgba(54, 54, 54, 0.747);
+   width: 2px;
+   height: 25px;
+}
+.down #in::before,
+.down #in::after{
+   content: "";
+   position: absolute;
+   background-color: rgba(54, 54, 54, 0.747);
+   height: 2px;
+   width: 15px;
+   top: 25px;
+   transform-origin: left;
+}
+.down #in::before{
+   transform: rotate(-40deg) translateX(1px);
+}
+.down #in::after{
+   transform: rotate(220deg) translateX(-1px) translateY(1px);
+}
+
+.underline{
+   position: absolute;
+   display: block;
+   width: 100%;
+   transition-duration: 200ms;
+}
+.underline::before,
+.underline::after{
+   content: "";
+   position: absolute;
+   background-color: #222222a1;
+   transition-duration: 200ms;
+   width: 0px;
+   height: 0px;
+}
+.underline::before{
+   left: 50%;
+}
+.underline::after{
+   right: 50%;
+}
+
+.cross{
+   position: absolute;
+   top: 1%;
+   right: 1%;
+   width: 40px;
+   height: 40px;
+}
+.cross .cross-in{
+   width: 100%;
+   height: 100%;
+}
+.cross .cross-in::before,
+.cross .cross-in::after{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 1px;
+   background-color: #000000;
+}
+.cross .cross-in::before{
+   left: 5px;
+   transform-origin: left;
+   transform: rotate(45deg);
+}
+.cross .cross-in::after{
+   right: 5px;
+   transform-origin: right;
+   transform: rotate(-45deg);
+}
+@media all and (max-width:425px){
+   .cross{
+      width: 30px;
+      height: 30px;
+   }
+   .cross .cross-in::before{
+      left: 4px;
+   }
+   .cross .cross-in::after{
+      right: 4px;
+   }
+}

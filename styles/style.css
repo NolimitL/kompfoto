@@ -1,0 +1,246 @@
+@import "reset.css";
+@import "arrows.css";
+@import "breakpoints.css";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
+html::-webkit-scrollbar{
+   display: none;
+}
+body{
+   font-family: 'Comfortaa', cursive;
+   font-size: 18px;
+   font-weight: 400;
+   font-style: normal;
+   display: flex;
+   flex-flow: column nowrap;
+   min-height: 700px;
+   /* background: -webkit-linear-gradient(to bottom, #ffffff, #dfcfff6e);*/
+   /*Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient(to bottom, #ffffff, #fefcff);*/
+   /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   background: rgb(255, 255, 255);  /* fallback for old browsers */
+}
+header, section, footer{
+   margin: 0 auto;
+}
+header{
+   margin-top: 10px;
+   text-align: center;
+}
+header img#icon{
+   margin: 0 auto 5px auto;
+   width: 50px;
+}
+header h3#credo{
+   margin: 30px 0px;
+   font-style: italic;
+}
+
+section#service{
+   margin: 30px 0px;
+   padding: 0px 5px;
+}
+section#service #back{
+   display: none;
+   position: fixed;
+   left: calc(50% - 30%);
+   width: 60%;
+   top: 25%;
+   transition-duration: 300ms;
+   background-color: #ececec;
+   text-align: center;
+   z-index: 10;
+}
+section#service #back .cross{
+   border: none;
+   outline: none;
+   background-color: transparent;
+   padding: 0px;
+   margin: 10px 5px 0px 0px;
+}
+section#service #back #text-c,
+section#service #back #paragraph-c{
+   padding: 10px 20px;
+   line-height: 1.5em;
+}
+section#service #back #paragraph-c .inH{
+   font-size: 16px;
+}
+section#service #back #paragraph-c .inH .inP{
+   font-size: 18px;
+}
+section#service #list{
+   display: grid;
+   justify-items: center;
+   align-items: center;
+   grid-template-columns: 2fr 1fr 1fr 2fr;
+   grid-template-rows: 1fr 1fr 1fr 1fr;
+   row-gap: 15px;
+   column-gap: 15px;
+   transition-duration: 200ms;
+}
+section#service #list #_2,
+section#service #list #_5,
+section#service #list #_8{
+   grid-column: 2/4;
+}
+section#service #list #_10{
+   grid-column: 1/3;
+}
+section#service #list #_11{
+   grid-column: 3/5;
+}
+section#service #list .service{
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   position: relative;
+   padding: 5px 10px;
+   margin: 10px 0px;
+   color: #766AD0;
+   border: 1px solid transparent;
+   font-size: 16px;
+   white-space: nowrap;
+   transition: 300ms linear;
+}
+section#service #list .service .btn{
+   font-family: inherit;
+   border: none;
+   outline: none;
+   padding: 10px;
+   background-color: transparent;
+}
+section#service #list .service::before, 
+section#service #list .service::after, 
+section#service #list .btn::before,
+section#service #list .btn::after {
+   content: "";
+   position: absolute;
+   z-index: 1;
+   width: 15px;
+   height: 15px;
+   transition: 200ms linear;
+}
+section#service #list .service::before {
+   left: -1px;
+   top: -1px;
+   border-left: 1px solid #614DFF;
+   border-top: 1px solid #614DFF;
+}
+section#service #list .service::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1px solid #614DFF;
+    border-right: 1px solid #614DFF;
+}
+section#service #list .service .btn::after {
+   right: -1px;
+   top: -1px;
+   border-right: 1px solid #614DFF;
+   border-top: 1px solid #614DFF;
+}
+section#service #list .service .btn::before {
+   left: -1px;
+   bottom: -1px;
+   border-bottom: 1px solid #614DFF;
+   border-left: 1px solid #614DFF;
+}
+section#service #list .service:hover {
+   color: #614DFF;
+   border-color: #614DFF;
+}
+
+
+section#map{
+   margin: 30px 0px 15px;
+}
+section#map .we-here{
+   text-align: center;
+   margin-bottom: 10px;
+}
+section#map .down{
+   position: relative;
+   text-align: center;
+}
+section#map #adress{
+   margin-top: 45px;
+   text-align: center;
+}
+section#map #adress .noBlue:hover{
+   color: #222222;
+}
+section#map #yandex-map{
+   width: 100%;
+   height: 400px;
+   background-color:#cfcfcf;
+   margin-top: 10px;
+}
+
+
+section#info{
+   text-align: center;
+}
+section#info #schedule,
+section#info #contacts{
+   margin-top: 40px;
+}
+section#info #schedule .line,
+section#info #contacts .line{
+   margin-bottom: 10px;
+   line-height: 1.85em;
+}
+section#info #schedule .line.small, 
+section#info #contacts .line.small{
+   margin-bottom: 0px;
+   line-height: 1.25em;
+   font-size: 16px;
+}
+section#info #contacts .line .noBlue:hover{
+   color: #222222;
+}
+
+
+footer#foot{
+   font-size: 17px;
+   padding-top: 10px;
+   margin: 30px 0px 0px ;
+   background-color: #ececec;
+   text-align: center;
+}
+footer#foot h3#credo{
+   font-size: 16px;
+   margin: 10px 0px 20px;
+   font-style: italic;
+}
+footer#foot h3#text-social{
+   font-size: 16px;
+}
+footer#foot #social{
+   margin: 20px 0px 30px;
+   display: flex;
+   flex-flow: row;
+   justify-content: space-evenly;
+}
+footer#foot #social .s-links{
+   text-align: center;
+   position: relative;
+}
+
+.noBlue{
+   color: #4b3aca;
+   transition-duration: 200ms;
+}
+.noBlue.links{
+   cursor: pointer;
+   opacity: 0.8;
+}
+/* .noBlue:hover>.underline::before,
+.noBlue:hover>.underline::after, */
+.noBlue:hover + .underline::before,
+.noBlue:hover + .underline::after{
+   width: 50%;
+   height: 1px;
+}
+.foggy{
+   opacity: 0.5;
+}

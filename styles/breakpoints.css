@@ -1,0 +1,103 @@
+@media all and (max-width:1024px){
+   body section#service #list .service {
+      padding: 0px;
+   }
+   body section#service #list {
+      column-gap: 5px;
+   }
+}
+@media all and (max-width:915px){
+   body section#service #list {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+      padding: 0px 10px;
+      column-gap: 10px;
+   }
+   body section#service #list #_1,
+   body section#service #list #_3,
+   body section#service #list #_5,
+   body section#service #list #_7,
+   body section#service #list #_9,
+   body section#service #list #_11{
+      grid-column: 1 / 2;
+   }
+   body section#service #list #_2,
+   body section#service #list #_4,
+   body section#service #list #_6,
+   body section#service #list #_8,
+   body section#service #list #_10{
+      grid-column: 2 / 3;
+   }
+}
+@media all and (max-width:768px){
+   body header h3#credo{
+      margin: 20px 0px;
+   }
+   body section#service #back{
+      top: 20%;
+   }
+}
+@media all and (max-width:670px){
+   body section#service #list{
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+   }
+   body section#service #list .service {
+      padding: 5px 15px;
+   }
+}
+@media all and (max-width:500px){
+   body header h3#credo{
+      padding: 0px 10px;
+   }
+   body section#service #back{
+      left: calc(50% - 40%);
+      width: 80%;
+   }
+   body footer#foot #social{
+      flex-flow: column;
+      margin-bottom: 15px;
+   }
+   body footer#foot #social .s-links{
+      line-height: 1.5em;
+      margin: 5px 0px;
+   }
+   body footer#foot #social .s-links .underline:hover,
+   body footer#foot #social .s-links .underline{
+      display: none;
+   }
+}
+@media all and (max-width:425px){
+   body section#service #list .service::before, 
+   body section#service #list .service::after, 
+   body section#service #list .btn::before,
+   body section#service #list .btn::after {
+      content: none;
+   }
+   body section#service #list .service,
+   body section#service #list .service:hover {
+      border: 0px;
+      white-space: normal;
+   }
+   body section#service #list .service .btn + .underline::before,
+   body section#service #list .service .btn + .underline::after{
+      width: calc(100% - 15px * 2);
+      height: 1px;
+   }
+   body section#service #list .service .btn + .underline::before{
+      left: 0px;
+   }
+   body section#service #list .service .btn + .underline::after{
+      display: none;
+   }
+   
+}
+@media all and (min-width:426px){
+   body section#service #list .service .btn + .underline::before,
+   body section#service #list .service .btn + .underline::before,
+   body section#service #list .service .btn + .underline{
+      display: none;
+   }
+}
